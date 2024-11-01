@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Sections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<header>
+    <h1>Welcome to my website!</h1>
+    <p id="date-time"></p> <!-- Placeholder for Date and Time -->
+</header>
+    <h2 id="dynamic-header"></h2>
+    <img src="received_1442261569702630.jpeg" alt=""
+    width="400"
+    height="500">
+    <img src="byu.png" class="byu-image">
+
+<main>
+    <section class="clickable-section" onclick="openSection('section1')">
+        <h2><i class="fas fa-user"></i>Experience</h2>
+        <img src="work.jpg" alt="Work Picture" class="work-image">
+        <p>Learn more about why I am here!</p>
+    </section>
+
+    <section class="clickable-section" onclick="openSection('section2')">
+        <h2>Hobbies</h2>
+        <img src="soccer.jpg" alt="Soccer Picture" class="soccer-image">
+        <p>Learn more about what I love to do for fun!<p>
+    </section>
+
+    <section class="clickable-section" onclick="openSection('section3')">
+        <h2>Family</h2>
+        <img src="my_family.jpg" alt="Family Photo" class="family-image">
+        <p>Learn more about where I come from!</p>
+    </section>
+
+    <div id="section-detail" class="section-detail">
+        <button onclick="closeSection()">Close</button>
+        <h2 id="section-title"></h2>
+        <p id="section-description"></p>
+    </div>
+</main>
+
+<!-- Chatbot Icon -->
+<div id="chat-container">
+    <div id="chat-icon" onclick="toggleChatbot()">
+        <img src="istockphoto-1333838449-170667a.jpg" alt="Chat Icon" />
+    </div>
+
+<div id="chatbot-container" style="display: none;">
+    <div id="chatbox">
+        <div id="chat-header">
+            <h2>Let me know how I can improve my website!</h2>
+        </div>
+        <div id="chatlog"></div>
+        <input type="text" id="user-input" placeholder="Type your message here..." />
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
